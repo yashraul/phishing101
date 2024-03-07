@@ -6,6 +6,15 @@
     <title>Phishing Website Detector</title>
 </head>
 <body>
-    
+    <h2>Phishing Website Detector</h2>
+    <form action="/predict" method="post">
+        <label for="url">Enter URL:</label><br>
+        <input type="text" id="url" name="url"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
 </body>
 </html>
